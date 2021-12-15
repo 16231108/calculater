@@ -94,6 +94,7 @@
 </template>
 <script>
 import SignCanvas from '../packages';
+import axios from 'axios'
 export default {
     name : 'draw_canvas',
     components:{SignCanvas},
@@ -120,6 +121,7 @@ export default {
                 writeColor: '#101010', // 轨迹颜色  [String] 可选
                 isSign: true, //签名模式 [Boolean] 默认为非签名模式,有线框, 当设置为true的时候没有任何线框
                 imgType:'png'   //下载的图片格式  [String] 可选为 jpeg  canvas本是透明背景的
+                last_result:''
             }
         }
     },
