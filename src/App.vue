@@ -38,7 +38,7 @@
       update:function(item){//[结果，算式]
         //var item=['2','1+1=2']
         this.cal_result=item[1]
-        this.result_size="font-size:"+Math.max(Math.min(Math.floor(window.screen.availHeight*0.25-85),Math.floor((window.screen.availWidth*0.7-6)/item[1].length)),Math.floor(window.screen.availHeight*0.25-85)/2)+"px"
+        this.result_size="font-size:"+Math.max(Math.min(Math.floor(window.screen.availHeight*0.25-85),Math.floor((window.screen.availWidth*0.7-6)/item[1].length)),Math.floor(window.screen.availHeight*0.25-85)/2)+"px;color:white"
         if(this.icon_index==10){
           var tmp_list=JSON.parse(JSON.stringify(this.icon_list));
           this.icon_list=[]
@@ -46,8 +46,8 @@
             this.icon_list.push(tmp_list[i+1])
           }
         }
-        var item_style="font-size:"+Math.max(Math.min(Math.floor(window.screen.availHeight*0.1-30),Math.floor((window.screen.availWidth*0.3-6)*0.7)/item[1].length),Math.floor((window.screen.availHeight*0.1-30)/2))+"px"
-        var result_style="font-size:"+Math.max(Math.min(Math.floor(window.screen.availHeight*0.1-30),Math.floor((window.screen.availWidth*0.3-6)*0.3/item[0].length)),Math.floor((window.screen.availHeight*0.1-30)/2))+"px"
+        var item_style="font-size:"+Math.max(Math.min(Math.floor(window.screen.availHeight*0.1-35),Math.floor((window.screen.availWidth*0.3-6)*0.7)/item[1].length),Math.floor((window.screen.availHeight*0.1-35)/2))+"px"
+        var result_style="font-size:"+Math.max(Math.min(Math.floor(window.screen.availHeight*0.1-35),Math.floor((window.screen.availWidth*0.3-6)*0.3/item[0].length)),Math.floor((window.screen.availHeight*0.1-35)/2))+"px"
         item.push(item_style)
         item.push(result_style)
         this.icon_list.push(item)
@@ -63,7 +63,8 @@
       }
     },
     mounted: function() {
-      
+      this.update(['2','1+1=2'])
+      this.update(['3','7-4=3'])
     },
 
 }
@@ -86,7 +87,7 @@
                 box-sizing: border-box;
                 float: right;
                 border-left: 3px solid silver;
-                background-color: #CCFF99;
+                background-color: #999999;
             }
             #calc_part{
                 width: 70%;
@@ -107,7 +108,7 @@
         font-family: "Times New Roman";
         font-style:italic;
         border-width: 0px;
-        background-color: #99CC00;
+        background-color: #999999;
 
     }
     .his_item{
@@ -126,7 +127,7 @@
     }
     .page-my{
         float: right;
-        background-color: #99CC00;
+        background-color: #999999;
         /*font-size: calc(21vw/4);*/
         font-size: 30px;
         height: 100%;
@@ -135,14 +136,16 @@
         position:absolute;
         bottom:0px;
         right: 3px;
+        font-family: 'Lucida Family';
         /*background-color: #CCFF99;*/
         border-width: 0px;
     }
             .cal_form{
               font-size: 52px;
-                background-color: #0099CC;
+                background-color: black;
                 text-align: right;
-                font-family: 'CharlisSILTalic';
+                font-family: 'Helvetica';
+
                 padding-top: 6px;
                 width: 100%;
                 height: 100%;
