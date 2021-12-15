@@ -3,15 +3,15 @@
     <div id="global">
             <div id='calc_part'>
                 <div id="result_screen">
-                  <textarea class="cal_form" :style="result_size">{{cal_result}}</textarea>
+                  <textarea readonly="readonly" class="cal_form" :style="result_size">{{cal_result}}</textarea>
                 </div>
               <draw_canvas></draw_canvas><!--画布-->
             </div>
             <div id="history_meue" >
 
               <div class='his_item' v-for="item in show_icon_list">
-                <textarea class="page-day" :style="item[3]">{{item[0]}}</textarea>
-                <textarea class="page-my" :style="item[2]">{{item[1]}}</textarea>
+                <textarea readonly="readonly" class="page-day" :style="item[3]">{{item[0]}}</textarea>
+                <textarea readonly="readonly" class="page-my" :style="item[2]">{{item[1]}}</textarea>
               </div>
 
             </div>
