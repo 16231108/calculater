@@ -63,18 +63,7 @@
       }
     },
     mounted: function() {
-      this.update(['3','1+2=3'])
-    this.update(['31','15+16=31'])
-    this.update(['33123','3214132-312321=3122'])
-    this.update(['4','321412+312=4'])
-    this.update(['5','3212+1-1=5'])
-    this.update(['6','321=8'])
-    this.update(['7','3213+2=1'])
-    this.update(['8','323-2=1'])
-    this.update(['9','3221=3122'])
-    this.update(['10','323=12'])
-    this.update(['11','31=2'])
-    this.update(['12','12111111111111111sssssssssssssssss1'])
+      
     },
 
 }

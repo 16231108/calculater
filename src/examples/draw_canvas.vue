@@ -120,7 +120,8 @@ export default {
                 minWriteWidth: 5, // 写字模式最小线宽  [Number] 可选
                 writeColor: '#101010', // 轨迹颜色  [String] 可选
                 isSign: true, //签名模式 [Boolean] 默认为非签名模式,有线框, 当设置为true的时候没有任何线框
-                imgType:'png'   //下载的图片格式  [String] 可选为 jpeg  canvas本是透明背景的
+                imgType:'png'  , //下载的图片格式  [String] 可选为 jpeg  canvas本是透明背景的,
+                
 
             }
         }
@@ -139,7 +140,14 @@ export default {
          */
         saveAsImg(){
             const img = this.$refs.SignCanvas.saveAsImg();
-            
+            //this.last_result=this.last_result+'1'
+            var last_result;
+            if(this.$parent.show_icon_list.length==0){
+                last_result=''
+            }else{
+                last_result= this.$parent.show_icon_list[0][0]
+            }
+            alert(last_result)
             this.$parent.update(['21','w1w2'])
             //alert(`image 的base64：${img}`);
         },
